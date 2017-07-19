@@ -1,9 +1,8 @@
 import Ember from 'ember';
 
-const { I18n } = Ember;
-
 export default {
   render(attribute, context) {
+    let I18n = Ember.I18n;
     if (I18n) {
       return I18n.t(`errors.${attribute}`, context);
     } else {
